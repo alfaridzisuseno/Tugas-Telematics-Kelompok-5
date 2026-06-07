@@ -1,163 +1,352 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@300;400&display=swap');
 
-body {
-    font-family: 'Roboto', 'Segoe UI', sans-serif;
-    line-height: 1.8;
+/* --- Reset Dasar --- */
+* {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #ffcc00 0%, #e6b800 100%); 
-    color: #333333;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-header {
-    background-color: #2c2c2c;
-    color: #ffcc00;
-    padding: 30px 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Mengatur tata letak judul dan foto di sampingnya */
-.header-container {
+/* --- NAVIGATION BAR --- */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
+    background-color: #1a1a1a;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-.header-text h1 {
-    margin: 0;
-    font-size: 2.6em;
-    letter-spacing: 2px;
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #ffcc00;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
     text-transform: uppercase;
+    transition: color 0.3s ease;
 }
 
-.subtitle {
-    font-size: 1.1em;
-    color: #cccccc;
-    margin: 5px 0 15px 0;
+.nav-links a:hover {
+    color: #ffcc00;
 }
 
-/* Desain tulisan Kelompok 5 di bawah judul */
-.badge-kelompok {
-    display: inline-block;
+.badge {
     background-color: #ffcc00;
-    color: #2c2c2c;
-    padding: 6px 20px;
-    font-weight: bold;
+    color: #1a1a1a;
+    padding: 6px 15px;
     border-radius: 20px;
-    font-size: 0.95em;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-weight: bold;
+    font-size: 14px;
 }
 
-.header-image img {
-    border-radius: 8px;
-    border: 3px solid #ffcc00;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    max-width: 180px;
-    height: auto;
-}
-
-/* Desain Kartu Putih Utama */
-.container {
-    width: 85%;
-    max-width: 950px;
-    margin: 40px auto;
-    background: #ffffff;
-    padding: 45px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-
-section {
-    margin-bottom: 45px;
-}
-
-h2 {
-    color: #2c2c2c;
-    border-bottom: 3px solid #ffcc00;
-    padding-bottom: 8px;
+/* --- HERO SECTION (Gaya United Tractors) --- */
+.hero-section {
+    position: relative;
+    height: 100vh; /* Tinggi penuh layar */
+    background-image: url('background-utama.jpg'); /* Mengambil foto atas sebagai background */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
     margin-top: 0;
-    font-size: 1.6em;
 }
 
-p {
-    font-size: 1.05em;
-    color: #4a4a4a;
-    text-align: justify;
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65); /* Kaca gelap transparan */
+    z-index: 1;
 }
 
-ul, ol {
-    padding-left: 25px;
+.hero-content {
+    position: relative;
+    z-index: 2; /* Agar teks di atas efek kaca */
+    max-width: 800px;
+    color: #ffffff;
 }
 
-ul li, ol li {
-    margin-bottom: 12px;
-    font-size: 1.05em;
-    color: #4a4a4a;
+.hero-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
-/* Kotak sorotan pada pengertian */
-.highlight-box {
-    background-color: #fffbef;
-    border-left: 6px solid #ffcc00;
-    padding: 5px 20px;
-    border-radius: 0 8px 8px 0;
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 55px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.1;
 }
 
-/* Desain untuk alur Cara Kerja */
-.flow-container {
-    background-color: #f9f9f9;
-    padding: 20px;
+.hero-content h1 span {
+    color: #ffcc00; /* Warna kuning pada judul utama */
+}
+
+.hero-content p {
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 600px;
+}
+
+/* --- KONTEN PENJELASAN --- */
+.content-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 30px;
     border-radius: 8px;
-    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #ffcc00;
 }
 
-.flow-container p {
+.dark-card {
+    background: #2c2c2c;
+    color: #ffffff;
+    border-top: 4px solid #555;
+}
+
+.card h3 {
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px dashed #dddddd;
+    color: #1a1a1a;
 }
 
-.flow-container p:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
+.yellow-text {
+    color: #ffcc00 !important;
 }
 
-/* Desain Foto di Bagian Bawah */
-.bottom-image-container {
+.card ul, .card ol {
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 10px;
+}
+
+.step-box p {
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 3px solid #ffcc00;
+    margin-bottom: 10px;
+}
+
+/* --- FOTO BAWAH --- */
+.bottom-image-section {
     text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 2px solid #eeeeee;
+    margin-top: 50px;
 }
 
 .bottom-image {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    max-width: 900px;
     border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-.image-caption {
-    font-size: 0.95em;
+.bottom-image-section p {
+    margin-top: 15px;
     font-style: italic;
-    color: #777777;
-    text-align: center;
-    margin-top: 10px;
+    color: #666;
 }
 
+/* --- FOOTER --- */
 footer {
-    text-align: center;
-    padding: 25px 0;
-    background: #2c2c2c;
+    background-color: #1a1a1a;
     color: #ffffff;
-    font-size: 0.95em;
-    margin-top: 60px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
 }
 
 footer span {
     color: #ffcc00;
     font-weight: bold;
+}
+/* --- RESET DASAR DAN LAINNYA TETAP SAMA... --- */
+
+/* --- FOOTER BERGAYA UT (Versi Rata Kiri & Poin Kebawah) --- */
+.united-style-footer {
+    background-color: #1a1a1a; /* Latar belakang hitam pekat */
+    color: #ffffff; /* Teks putih */
+    padding: 60px 0; /* Padding atas bawah saja, kiri kanan diatur oleh container */
+    font-family: 'Roboto', sans-serif;
+    margin-top: 50px;
+}
+
+/* KUNCI RATA KIRI: Menggunakan container yang ukurannya sama dengan konten atas */
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Baris Atas: Bagian Info Kelompok --- */
+.footer-top-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start; /* Memaksa konten mentok ke kiri */
+}
+
+.footer-info {
+    width: 100%;
+    text-align: left;
+}
+
+.footer-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffcc00; /* Warna kuning pada judul kelompok */
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* --- Gaya Baru Poin-Poin Nama Ke Bawah --- */
+.footer-names-list {
+    list-style-type: none; /* Menghapus bulatan bawaan browser agar bisa kita kustom */
+    padding-left: 0;
+}
+
+.footer-names-list li {
+    font-size: 15px;
+    line-height: 2; /* Memberikan jarak vertikal antar nama agar rapi */
+    position: relative;
+    padding-left: 20px; /* Memberi ruang untuk poin di sebelah kiri nama */
+}
+
+/* Trik membuat poin kotak kecil berwarna kuning di setiap nama */
+.footer-names-list li::before {
+    content: "▪"; /* Karakter kotak */
+    color: #ffcc00; /* Warna kuning khas BOMAG/UT */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+}
+
+/* --- Baris Bawah: Garis Pemisah, Logo, Hak Cipta --- */
+.footer-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333; /* Garis pembisah abu-abu tipis */
+    padding-top: 30px;
+    position: relative; 
+}
+
+/* Sisi Kiri: Branding */
+.footer-branding {
+    flex: 0 0 auto;
+}
+
+.footer-logo {
+    max-height: 50px; 
+}
+
+/* Sisi Tengah: Hak Cipta dan Links */
+.footer-legal-copy {
+    text-align: center;
+    font-size: 14px;
+    flex: 1; 
+}
+
+.footer-legal-copy p {
+    margin-bottom: 5px;
+    color: #aaa; /* Warna teks hak cipta agak sedikit abu-abu */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: underline; 
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffcc00;
+}
+
+/* --- Tombol Kembali ke Atas (Kotak Kuning) --- */
+.footer-back-to-top {
+    position: absolute;
+    right: 0;
+    top: -22px; 
+}
+
+.back-to-top-btn {
+    background-color: #ffcc00; 
+    color: #1a1a1a;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+    transform: translateY(-5px); 
+}
+
+.arrow-up-icon {
+    font-style: normal;
 }

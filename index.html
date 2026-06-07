@@ -3,94 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOMAG Telematic System - Kelompok 5</title>
+    <title>BOMAG Telematic - Kelompok 5</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="header-text">
-                <h1>BOMAG TELEMATIC</h1>
-                <p class="subtitle">Sistem Manajemen Armada Alat Berat Terintegrasi</p>
-                <div class="badge-kelompok">Kelompok 5</div>
-            </div>
-            <div class="header-image">
-                <img src="bomag-atas.jpg" alt="BOMAG Header Image" onerror="this.src='https://via.placeholder.com/150x100?text=Foto+BOMAG+Atas'">
-            </div>
+
+    <nav class="navbar">
+        <div class="logo">BOMAG <span>Telematic</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Beranda</a></li>
+            <li><a href="#pengertian">Pengertian</a></li>
+            <li><a href="#fitur">Fitur & Fungsi</a></li>
+            <li><a href="#keunggulan">Keunggulan</a></li>
+            <li class="badge">Kelompok 5</li>
+        </ul>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Sistem Manajemen Armada Alat Berat</h2>
+            <h1>BOMAG <span>Telematic</span></h1>
+            <p>Sebagai solusi digital terdepan, BOMAG Telematic memantau performa, lokasi, dan kondisi kesehatan alat berat secara real-time demi efisiensi operasional tanpa batas.</p>
         </div>
     </header>
 
-    <div class="container">
-        <section id="pengertian">
-            <h2>1. Pengertian BOMAG Telematic</h2>
-            <div class="highlight-box">
-                <p><strong>BOMAG TELEMATIC</strong> adalah solusi digital manajemen armada (<i>fleet management</i>) terintegrasi yang menggabungkan teknologi hardware sensor pintar, GPS, dan software berbasis cloud. Sistem ini dirancang khusus oleh BOMAG untuk memantau performa, lokasi, dan kondisi kesehatan alat berat secara <i>real-time</i> dari jarak jauh tanpa harus mendatangi unit di lapangan.</p>
-            </div>
+    <main class="content-container">
+        
+        <section id="pengertian" class="card style-deep-card" style="grid-column: span 2; border-top: 4px solid #ffcc00; margin-bottom: 30px;">
+            <h3>1. Solusi Manajemen Armada Digital: BOMAG Telematic</h3>
+            <p><strong>BOMAG Telematic</strong> adalah ekosistem manajemen armada (*fleet management*) berbasis digital generasi terbaru yang dirancang untuk mengoptimalkan operasional alat berat secara *real-time*. Melalui integrasi konektivitas nirkabel dan kecerdasan sensorik, teknologi ini menjembatani komunikasi konstan antara unit alat berat di lapangan dengan pusat kendali manajemen.</p>
+            <p style="margin-top: 15px;">Dengan menyematkan perangkat telemetri canggih pada sistem mekanis, hidrolik, dan kelistrikan unit, BOMAG Telematic mampu mentransformasikan data mentah di lapangan menjadi wawasan strategis yang mendalam. Solusi ini memungkinkan para pemilik aset dan pemangku kepentingan untuk memantau performa, produktivitas, serta indikator kesehatan visual armada mereka kapan saja dan dari mana saja.</p>
         </section>
 
-        <section id="fungsi">
-            <h2>2. Fungsi Utama Sistem</h2>
-            <p>Sistem telematika ini memiliki fungsi vital dalam operasional konstruksi modern, antara lain:</p>
-            <ul>
-                <li><strong>Tracking Lokasi:</strong> Melacak posisi geografis alat berat secara presisi untuk mempermudah manajemen logistik proyek.</li>
-                <li><strong>Monitoring Konsumsi BBM:</strong> Memantau seberapa banyak bahan bakar yang dihabiskan dan mendeteksi jika ada penurunan bahan bakar yang tidak wajar.</li>
-                <li><strong>Pencatatan Jam Kerja (Hour Meter):</strong> Mendokumentasikan waktu kerja mesin secara otomatis untuk kebutuhan kalkulasi biaya sewa atau efisiensi kerja.</li>
-                <li><strong>Deteksi Dini Kerusakan:</strong> Berfungsi sebagai sistem peringatan awal apabila terjadi anomali pada komponen mesin sebelum kerusakan parah terjadi.</li>
-            </ul>
-        </section>
+        <div class="content-grid">
+            <section id="fitur" class="card">
+                <h3>2. Pilar Solusi Utama Operasional</h3>
+                <p>BOMAG Telematic menghadirkan fungsionalitas mutakhir untuk menjawab tantangan kompleks pada manajemen proyek konstruksi modern:</p>
+                
+                <ul style="margin-top: 15px; list-style-type: square; padding-left: 20px;">
+                    <li style="margin-bottom: 15px;">
+                        <strong>Manajemen Konsumsi Bahan Bakar (Fuel Efficiency Analytics):</strong> 
+                        <br><small style="color: #666;">Fungsi:</small> Memantau fluktuasi volume bahan bakar secara presisi. Sistem akan secara otomatis mendeteksi dan mengirimkan peringatan instan (*security alert*) jika terjadi penurunan volume BBM yang tidak wajar di luar jam operasional unit.
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                        <strong>Sistem Keamanan Geografis (Geo-Fencing Security):</strong> 
+                        <br><small style="color: #666;">Fungsi:</small> Memungkinkan pembatasan radius wilayah kerja digital pada peta koordinat proyek. Apabila unit bergerak melintasi batas geografis yang telah ditentukan tanpa otoritas resmi, sistem akan mengirimkan notifikasi keamanan dan mengaktifkan fitur pemutusan fungsi mesin jarak jauh.
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                        <strong>Optimasi Waktu Kerja Efektif (Idle Time Tracking):</strong> 
+                        <br><small style="color: #666;">Fungsi:</small> Menganalisis rasio antara waktu kerja aktif mesin dengan waktu tunggu (*idle*). Fitur ini membantu manajemen meminimalkan pemborosan energi dan emisi gas buang saat unit menyala namun tidak beroperasi.
+                    </li>
+                </ul>
+            </section>
 
-        <section id="komponen">
-            <h2>3. Komponen Sistem</h2>
-            <p>BOMAG Telematic dapat bekerja secara akurat berkat sinergi dari beberapa komponen utama berikut:</p>
-            <ol>
-                <li><strong>Modul Telematika & Sensor Mesin (Hardware):</strong> Perangkat keras yang ditanam di dalam unit alat berat untuk menangkap data dari komponen internal (mesin, hidrolik, kelistrikan).</li>
-                <li><strong>Antena GPS & Pemancar Seluler/Satelit:</strong> Berfungsi menangkap koordinat lokasi dan memancarkan data yang telah dikumpulkan oleh sensor ke jaringan internet.</li>
-                <li><strong>Server Cloud BOMAG:</strong> Pusat penyimpanan dan pengolahan data besar (<i>big data</i>) milik BOMAG yang menerima data mentah dari alat berat untuk dianalisis.</li>
-                <li><strong>User Interface (Web Portal & Mobile App):</strong> Dashboard atau aplikasi yang digunakan oleh pengguna (customer/manajemen) untuk melihat visualisasi data dalam bentuk grafik dan laporan yang mudah dipahami.</li>
-            </ol>
-        </section>
-
-        <section id="cara-kerja">
-            <h2>4. Cara Kerja Sistem</h2>
-            <p>Proses transmisi data pada BOMAG Telematic berlangsung melalui tahapan yang sistematis:</p>
-            <div class="flow-container">
-                <p><strong>Tahap 1 (Pengumpulan):</strong> Saat alat berat beroperasi, sensor internal merekam data seperti suhu mesin, tekanan oli, konsumsi BBM, dan koordinat GPS.</p>
-                <p><strong>Tahap 2 (Pengiriman):</strong> Modul telematika mengirimkan data tersebut melalui sinyal seluler atau satelit secara berkala ke Server Cloud BOMAG.</p>
-                <p><strong>Tahap 3 (Pengolahan):</strong> Server mengolah data mentah tersebut dan mengelompokkannya menjadi informasi diagnostik, konsumsi bahan bakar, dan jam kerja.</p>
-                <p><strong>Tahap 4 (Visualisasi):</strong> Pemilik armada membuka aplikasi BOMAG Telematic di laptop atau HP, dan semua informasi sudah siap dibaca dalam bentuk laporan yang rapi.</p>
-            </div>
-        </section>
-
-        <section id="keunggulan">
-            <h2>5. Keunggulan BOMAG Telematic</h2>
-            <p>Dibandingkan sistem telematika standar, BOMAG memiliki beberapa keunggulan kompetitif:</p>
-            <ul>
-                <li><strong>Ketahanan Tinggi:</strong> Hardware dirancang tangguh terhadap getaran ekstrem, debu, dan cuaca panas khas area proyek konstruksi jalan.</li>
-                <li><strong>Geo-Fencing yang Presisi:</strong> Pengguna bisa menggambar batas wilayah operasional digital di peta. Jika alat berat keluar dari batas kerja, alarm keamanan akan langsung berbunyi.</li>
-                <li><strong>Diagnostik Jarak Jauh (Remote Diagnostics):</strong> Sistem langsung memunculkan kode error spesifik jika ada kerusakan, sehingga teknisi tahu suku cadang apa yang harus dibawa sebelum ke lokasi.</li>
-                <li><strong>Integrasi dengan UT Connect:</strong> Khusus di Indonesia, sistem ini tersambung langsung dengan ekosistem United Tractors untuk kemudahan servis lokal.</li>
-            </ul>
-        </section>
-
-        <section id="keuntungan-customer">
-            <h2>6. Keuntungan dari Sisi Customer (Pemilik Alat)</h2>
-            <p>Dari segi bisnis dan investasi, keuntungan yang didapatkan oleh customer sangat besar:</p>
-            <ul>
-                <li><strong>Efisiensi Biaya Operasional:</strong> Mengurangi pemborosan BBM dengan memantau <i>idle time</i> (waktu mesin menyala sia-sia tanpa bekerja).</li>
-                <li><strong>Memaksimalkan Uptime:</strong> Perawatan berkala menjadi lebih terjadwal berkat pengingat otomatis, sehingga mencegah alat berat rusak mendadak di tengah proyek.</li>
-                <li><strong>Keamanan Aset Maksimal:</strong> Mencegah pencurian unit atau penyalahgunaan alat berat di luar jam kerja proyek yang sah.</li>
-                <li><strong>Pengambilan Keputusan Berbasis Data:</strong> Memudahkan manajemen mengevaluasi apakah produktivitas alat berat sudah sesuai dengan target proyek.</li>
-            </ul>
-        </section>
-
-        <div class="bottom-image-container">
-            <img src="bomag-bawah.jpg" alt="BOMAG Product Image" class="bottom-image" onerror="this.src='https://via.placeholder.com/800x400?text=Foto+Produk+Alat+Berat+BOMAG'">
-            <p class="image-caption">Implementasi Teknologi Telematika pada Jajaran Alat Berat BOMAG</p>
+            <section class="card dark-card">
+                <h3 class="yellow-text">3. Infrastruktur & Arsitektur Teknologi</h3>
+                <p>Kelancaran transfer data dari area operasional terpencil menuju layar monitor didukung oleh empat pilar komponen infrastruktur utama kami:</p>
+                
+                <ol style="margin-top: 15px; padding-left: 20px; line-height: 1.8;">
+                    <li style="margin-bottom: 10px;"><strong class="yellow-text">Modul Kontrol Telematika (Hardware):</strong> Komputer mikro bersertifikasi industri yang dirancang khusus untuk bertahan pada getaran ekstrem, kelembapan tinggi, dan suhu operasional konstruksi yang masif.</li>
+                    <li style="margin-bottom: 10px;"><strong class="yellow-text">Transmisi Multi-Jaringan Global:</strong> Sistem pemancar yang mengombinasikan jaringan seluler dan konektivitas Satelit secara otomatis, memastikan kesinambungan pengiriman data sekalipun unit berada di area *blank spot* atau pedalaman tambang.</li>
+                    <li style="margin-bottom: 10px;"><strong class="yellow-text">Pusat Data Cloud BOMAG:</strong> Server pusat berbasis awan yang memproses enkripsi data skala besar (*big data*), melakukan kompilasi diagnostik, dan mendeteksi anomali unit secara instan menggunakan algoritma cerdas.</li>
+                    <li style="margin-bottom: 10px;"><strong class="yellow-text">Dashboard Analitik Eksekutif:</strong> Antarmuka pengguna (*User Interface*) berbasis web dan aplikasi *mobile* yang menyajikan visualisasi data, grafik analitik, serta laporan kondisi armada dalam format eksekutif yang mudah dipahami.</li>
+                </ol>
+            </section>
         </div>
-    </div>
 
-    <footer>
-        <p>&copy; 2026 Tugas Kuliah Telematika | Dikembangkan oleh <span>Kelompok 5</span></p>
+        <section class="card" style="grid-column: span 2; margin-bottom: 30px;">
+            <h3>4. Arsitektur Alur Data: Dari Lapangan Menuju Keputusan Strategis</h3>
+            <p>Proses integrasi data dari unit alat berat hingga menjadi keputusan manajemen dilakukan melalui empat tahapan sistematis berikut:</p>
+            
+            <div class="step-box" style="margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+                <div style="background: #f9f9f9; padding: 15px; border-top: 3px solid #ffcc00; border-radius: 4px;">
+                    <h5><strong>1. Data Acquisition</strong></h5>
+                    <p style="font-size: 13px; color: #555; margin-top: 5px;">Sensor internal merekam seluruh metrik vital secara kontinu, mulai dari suhu oli, tekanan hidrolik, jam kerja mesin (*Hour Meter*), hingga titik koordinat GPS.</p>
+                </div>
+                <div style="background: #f9f9f9; padding: 15px; border-top: 3px solid #ffcc00; border-radius: 4px;">
+                    <h5><strong>2. Telemetry Transmission</strong></h5>
+                    <p style="font-size: 13px; color: #555; margin-top: 5px;">Paket data yang terenkripsi dikirimkan secara berkala melintasi ruang udara memanfaatkan enkripsi jaringan nirkabel global yang aman menuju server pusat.</p>
+                </div>
+                <div style="background: #f9f9f9; padding: 15px; border-top: 3px solid #ffcc00; border-radius: 4px;">
+                    <h5><strong>3. Cloud Analytics</strong></h5>
+                    <p style="font-size: 13px; color: #555; margin-top: 5px;">Server Cloud BOMAG mengolah data mentah menggunakan komparasi parameter standar pabrikan untuk memetakan status kesehatan komponen alat berat.</p>
+                </div>
+                <div style="background: #f9f9f9; padding: 15px; border-top: 3px solid #ffcc00; border-radius: 4px;">
+                    <h5><strong>4. Executive Dashboard</strong></h5>
+                    <p style="font-size: 13px; color: #555; margin-top: 5px;">Data disajikan dalam bentuk rekomendasi operasional konkret pada perangkat pengguna, mempermudah manajemen dalam mengambil keputusan pemeliharaan aset.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="content-grid">
+            <section id="keunggulan" class="card">
+                <h3>5. Parameter Manajemen Performa Armada</h3>
+                <p>Komparasi efisiensi operasional antara metodologi pengelolaan armada konvensional dengan implementasi ekosistem digital BOMAG Telematic:</p>
+                <table style="width: 100%; margin-top: 15px; border-collapse: collapse; font-size: 14px;">
+                    <thead>
+                        <tr style="background: #1a1a1a; color: #fff;">
+                            <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Dimensi Manajemen</th>
+                            <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Metodologi Konvensional</th>
+                            <th style="padding: 10px; border: 1px solid #ddd; text-align: left; color: #ffcc00;">Standar BOMAG Telematic</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Pemeliharaan Preventif</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd; color: #666;">Pencatatan waktu kerja secara manual berisiko mengakibatkan keterlambatan servis, memicu kerusakan fatal pada komponen utama unit.</td>
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold; color: #27ae60;">Sistem notifikasi otomatis memberikan alarm preventif berbasis jam kerja aktual, meminimalkan risiko waktu henti terencana.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Transparansi Finansial</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd; color: #666;">Estimasi manual alokasi bahan bakar rentan terhadap manipulasi data dan ketidakakuratan pelaporan dari lapangan.</td>
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold; color: #27ae60;">Audit konsumsi bahan bakar disajikan dalam bentuk data grafik digital akurat yang tidak dapat diintervensi oleh pihak ketiga.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="keuntungan" class="card">
+                <h3>6. Dampak Finansial & Return on Investment (ROI)</h3>
+                <p>Implementasi BOMAG Telematic tidak hanya berfokus pada kecanggihan teknologi, melainkan pada efisiensi finansial dan keberlanjutan bisnis mitra kami:</p>
+                
+                <div style="margin-top: 15px;">
+                    <p style="margin-bottom: 12px;"><strong>📉 Reduksi Biaya Perbaikan (Hingga 40%):</strong> Diagnostik dini dari sensor mampu mendeteksi gejala kerusakan kecil sebelum menjadi malfungsi sistemik yang membutuhkan biaya penggantian suku cadang yang besar.</p>
+                    <p style="margin-bottom: 12px;"><strong>📉 Efisiensi Alokasi Energi (Hingga 20%):</strong> Melalui eliminasi waktu *idle* mesin yang tidak produktif, perusahaan mitra dapat menghemat pengeluaran bahan bakar secara signifikan setiap bulannya.</p>
+                    <p style="margin-bottom: 12px;"><strong>📈 Optimalisasi Siklus Hidup Aset:</strong> Pemeliharaan berkala yang presisi berdasarkan data telemetri akan mempertahankan performa optimal mekanis unit sekaligus meningkatkan nilai jual kembali (*resale value*) aset tetap perusahaan.</p>
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <footer class="united-style-footer">
+        <div class="footer-container">
+            
+            <div class="footer-top-row">
+                <div class="footer-info">
+                    <h3 class="footer-title">Kelompok 5</h3>
+                    <ul class="footer-names-list">
+                        <li>Ahmad Aldy</li>
+                        <li>Muhammad Ali Miqdar</li>
+                        <li>Muhammad Irgi Alfaridzi</li>
+                        <li>Muhammad Zahran Rafindra</li>
+                        <li>Siti Nuraziza</li>
+                        <li>Syahrundra Putra</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-row">
+                <div class="footer-branding">
+                    <img src="logo-bomag.png" alt="BOMAG Logo" class="footer-logo">
+                </div>
+                
+                <div class="footer-legal-copy">
+                    <p>&copy; 2026 BOMAG Telematic System</p>
+                    <div class="footer-links">
+                        <a href="#">Kebijakan Privasi</a>
+                        <a href="#">Kontak</a>
+                    </div>
+                </div>
+                
+                <div class="footer-back-to-top">
+                    <a href="#hero" class="back-to-top-btn"><i class="arrow-up-icon">^</i></a>
+                </div>
+            </div>
+
+        </div>
     </footer>
+</body>
+</html>
+
 </body>
 </html>
